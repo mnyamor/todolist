@@ -1,0 +1,151 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body {
+    background: $mainBg;
+    color: $textColor;
+    font-family: "Roboto", Arial, sans-serif;
+    text-align: center;
+}
+button {
+    border: 0;
+    height: inherit;
+    background: transparent;
+}
+h1 {
+    text-transform: uppercase;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50%;
+    padding: 0 20px 20px;
+}
+.wrapper,
+.jumbotron {
+    background-color: $formBackground;
+}
+.input-group-addon {
+    background: $defaultColor;
+    border: none;
+    color: $whiteColor;
+}
+li:hover {
+    background: #f9f9f9;
+    color: #222;
+}
+li {
+    position: relative;
+    padding: 10px 5px;
+}
+li > .form-group {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.todos li .form-group .input-group {
+    width: 80%;
+    position: absolute;
+}
+.error {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px 20px;
+}
+ul {
+    padding: 0;
+}
+.actions {
+    position: absolute;
+    right: 0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin: 0;
+}
+i {
+    border: none;
+    color: gray;
+    padding: 5px;
+    border-radius: 4px;
+}
+ul li {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    position: relative;
+    border-top: 1px solid #34363a;
+    color: #71757d;
+    margin: 15px 0;
+}
+button,
+button:active,
+button.active,
+button:focus {
+    outline: 0;
+}
+li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px 10px 8px;
+    cursor: pointer;
+    animation: fadeIn cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+.tasks.editing > input {
+    position: absolute;
+    top: -6px;
+}
+.form-group {
+    margin-bottom: 0;
+}
+.todos {
+    padding: 15px 0 0;
+    list-style: none;
+    li.input-group {
+        width: 82%;
+    }
+    li span.tasks {
+        width: 85%;
+        position: relative;
+        float: left;
+        top: 50%;
+        padding: 0;
+        font-family: "Roboto", Arial, sans-serif;
+        text-transform: uppercase;
+        text-align: left;
+        &:before {
+            content: ' ';
+            display: inline-block;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            margin: 0px 15px 0px 0px;
+            font-weight: bold;
+            color: green;
+            line-height: 20px;
+            border: solid 2px #F8A434;
+            border-radius: 100px;
+            vertical-align: middle;
+            line-height: 100%;
+        }
+        &.done {
+            text-decoration: line-through;
+            &:before {
+                content: '•';
+                color: white;
+                background: #F8A434;
+                -webkit-transition: opacity 0.3s;
+                transition: opacity 0.3s;
+            }
+        }
+    }
+}

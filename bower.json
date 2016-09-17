@@ -1,0 +1,17 @@
+{
+  "name": "todolist",
+  "description": "Todo app that allows a user to add, delete and edit a todo.",
+  "main": "index.js",
+  "authors": [
+    "“Mary <“mnyamor@gmail.com”>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mnyamor/todolist",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
