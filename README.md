@@ -8,6 +8,7 @@ Todo app that allows a user to add, delete and edit a todo.
 * SCSS
 * ES6
 * Webpack
+* Hot reloading
 * Bootstrap
 * JQuery
 
@@ -53,9 +54,14 @@ Make sure npm version is 3.x and node that you are using the latest version of n
      $ npm -v
 
 ### Running the project
+ Ensure you have webpack and webpack dev server installed globally. To do this, run:
+    $ npm install webpack -g
+    $ npm install webpack-dev-server -g
 
 Once you are in your project folder. You can now run the app by typing the following:
 
+    $ npm install
+    $ bower install
     $ npm start
 
 You should now be see the following
