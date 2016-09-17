@@ -55,6 +55,7 @@ Make sure npm version is 3.x and node that you are using the latest version of n
 
 ### Running the project
  Ensure you have webpack and webpack dev server installed globally. To do this, run:
+
     $ npm install webpack -g
     $ npm install webpack-dev-server -g
 
